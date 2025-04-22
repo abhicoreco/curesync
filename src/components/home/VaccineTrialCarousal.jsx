@@ -1,6 +1,6 @@
 import { Globe } from "lucide-react";
 import Carousel from "../ui/Carousel";
-import MaskGroup from "../../../Mask group.png";
+import MaskGroup from "/Mask group.png";
 import {Button} from "../ui/Button";
 
 const VaccineTrialCarousel = () => {

@@ -4,16 +4,16 @@ import Navbar from "../Navbar";
 import CustomerRatingCard from "../ui/customerRatingCard";
 
 // Import images
-import customerImage from "../../../Ellipse 6.png";
-import customerImage1 from "../../../Ellipse 7.png";
-import customerImage2 from "../../../Ellipse 8.png";
-import customerImage3 from "../../../Ellipse 9.png";
-import doctorImage from "../../../doctor.png";
-import quote from "../../../quote.svg";
+import customerImage from "/Ellipse 6.png";
+import customerImage1 from "/Ellipse 7.png";
+import customerImage2 from "/Ellipse 8.png";
+import customerImage3 from "/Ellipse 9.png";
+import doctorImage from "/doctor.png";
+import quote from "/quote.svg";
 import FeatureCard from "../ui/FeatureCard";
-import icon1 from "../../../icon1.svg";
-import icon2 from "../../../icon2.svg";
-import icon3 from "../../../icon3.svg";
+import icon1 from "/icon1.svg";
+import icon2 from "/icon2.svg";
+import icon3 from "/icon3.svg";
 import { Button } from "../ui/Button";
 import { Link } from "react-router-dom";
 

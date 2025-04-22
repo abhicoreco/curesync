@@ -10,7 +10,7 @@ const testimonials = [
     author: {
       name: "Sarah Johnson",
       role: "Clinical Trial Manager",
-      avatar: "../../../avatar.png",
+      avatar: "/avatar.png",
     },
   },
   {
@@ -19,7 +19,7 @@ const testimonials = [
     author: {
       name: "Emily Rodriguez",
       role: "Research Director",
-      avatar: "../../../avatar.png",
+      avatar: "/avatar.png",
     },
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     author: {
       name: "Michelle Chen",
       role: "Clinical Operations",
-      avatar: "../../../avatar.png",
+      avatar: "/avatar.png",
     },
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
     author: {
       name: "David Smith",
       role: "Medical Analyst",
-      avatar: "../../../avatar.png",
+      avatar: "/avatar.png",
     },
   },
   {
@@ -46,7 +46,7 @@ const testimonials = [
     author: {
       name: "Linda Green",
       role: "Healthcare Strategist",
-      avatar: "../../../avatar.png",
+      avatar: "/avatar.png",
     },
   },
 ];

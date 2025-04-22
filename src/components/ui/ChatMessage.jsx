@@ -3,7 +3,7 @@ export default function ChatMessage({ message }) {
     <div className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
       {!message.isUser && (
         <div className="flex items-center justify-center h-8 w-8  mr-2">
-          <img src="../../../bot.png" alt="" className=" h-[40px] w-[40px]" />
+          <img src="/bot.png" alt="" className=" h-[40px] w-[40px]" />
         </div>
       )}
       <div

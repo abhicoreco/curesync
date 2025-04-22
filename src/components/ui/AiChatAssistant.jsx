@@ -53,7 +53,7 @@ export default function AiChatAssistant() {
           <Send className="h-6 w-6" />
 
         </div> */}
-        <img src="../../../chat.png" alt="chat" />
+        <img src="/chat.png" alt="chat" />
         <h2 className="text-xl font-bold text-[#0a2540]">Ask AI</h2>
       </div>
 
