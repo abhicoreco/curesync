@@ -69,7 +69,7 @@ function TestimonialCarousel() {
       setStartIndex((prev) => (prev + 1) % testimonials.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, []);
 
   const visibleTestimonials = [];
   for (let i = 0; i < visibleCount; i++) {
@@ -77,22 +77,25 @@ function TestimonialCarousel() {
   }
 
   return (
-    <div className="w-full max-w-6xl mx-auto md:mt-25 px-4 py-12 ">
-      <h2 className="bg-gradient-to-r from-[#010B2A] to-[#0056B3] text-center bg-clip-text text-transparent font-bold text-3xl md:text-[46px] mb-12">Our Clients</h2>
-      <div className="flex gap-6 justify-center transition-transform duration-500 ease-in-out">
+    <div className="w-full max-w-screen-xl mx-auto px-4 py-16">
+      <h2 className="text-center font-bold text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-[#010B2A] to-[#0056B3] bg-clip-text text-transparent mb-12">
+        Our Clients
+      </h2>
+
+      {/* Cards container */}
+      <div className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap gap-6 justify-center items-stretch transition-all duration-500">
         {visibleTestimonials.map((testimonial, index) => (
-          <div key={testimonial.id} className="relative">
-            <TestimonialCard
-              text={testimonial.text}
-              isAlt={index % 2 === 0}
-            />
+          <div key={testimonial.id} className="flex-1 min-w-[280px] max-w-[400px]">
+            <TestimonialCard text={testimonial.text} isAlt={index % 2 === 0} />
             <div className="flex justify-center mt-4">
               <TestimonialAvatar image={testimonial.author.avatar} />
             </div>
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-8">
+
+      {/* Pagination Dots */}
+      <div className="flex justify-center mt-10">
         <PaginationDots
           total={testimonials.length}
           visibleCount={visibleCount}
