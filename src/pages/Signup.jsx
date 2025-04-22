@@ -161,7 +161,7 @@ export default function VaccineSignup() {
   // Render the signup form
   if (currentStep === "signup") {
     return (
-      <div className="flex h-screen w-full bg-white relative overflow-hidden">
+      <div className="flex min-h-screen w-full bg-white relative overflow-hidden">
         {/* Blue curved shape on left */}
         <div className="absolute top-0 left-0 w-[100px] h-[160px] bg-[#0056B3] rounded-br-[100px]" />
 
