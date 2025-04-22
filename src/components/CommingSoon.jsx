@@ -8,7 +8,7 @@ const CommingSoon = () => {
             <h1 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl">
               Great things coming soon.
             </h1>
-            <p className="mb-10 text-lg text-gray-700">We are a small and growing consulting firm with big ideas.</p>
+            <p className="mb-10 text-lg text-gray-700">We are a small and growing with big ideas.</p>
             <Link
                 to={"/"}
                 className="inline-flex items-center border border-gray-800 px-6 py-3 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-800 hover:text-white"
