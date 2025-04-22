@@ -6,7 +6,7 @@ import PaginationDots from "../ui/PaginationDots";
 const testimonials = [
   {
     id: 1,
-    text: '""Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
+    text: '"Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
     author: {
       name: "Sarah Johnson",
       role: "Clinical Trial Manager",
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     id: 3,
-    text: '""Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
+    text: '"Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
     author: {
       name: "Michelle Chen",
       role: "Clinical Operations",
@@ -42,7 +42,7 @@ const testimonials = [
   },
   {
     id: 5,
-    text: '""Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
+    text: '"Managing a vaccine trial has never been more efficient! With AI-powered participant matching, we recruited eligible candidates 50% faster. The real-time tracking dashboard provided instant data insights, and automated compliance reporting"',
     author: {
       name: "Linda Green",
       role: "Healthcare Strategist",

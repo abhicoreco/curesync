@@ -2,30 +2,18 @@ import React from "react";
 
 const AITrialRecommendation = () => {
   return (
-    <div className="relative mt-10 w-full max-w-screen left-0 mx-auto py-12 bg-[url(https://c.animaapp.com/m8sv2x5wuEhcZn/img/vector-3460.svg)] bg-no-repeat md:px-6 ">
-      {/* Light blue background */}
-      {/* <div className="absolute inset-0 z-0 left-0"> */}
-      {/* <img
-         className="w-[90%] max-w-[918px] h-[743px]"
-         alt="Process flow"
-         src="https://c.animaapp.com/m8sv2x5wuEhcZn/img/vector-3460.svg"
-       /> */}
-      {/* </div> */}
-
+    <div className="relative mt-10 w-full max-w-screen left-0 mx-0 py-12  md:px-6 ">
       {/* Content container */}
       <div className="relative  z-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* Left side with flow diagram */}
-        <div className="relative w-full md:w-2/5 md:flex hidden justify-center">
-          {/* Vertical line/rectangle */}
-          <div className="relative -right-12 sm:h-[280px] md:h-[380px] lg:h-[776px] lg:w-[382px] border border-gray-300 bg-white">
-            {/* Blue box */}
-            <div className="absolute top-[25%] -left-24 w-48 lg:w-[326px] h-16 md:h-20 lg:h-[144px]  bg-[#0056B3] rounded-lg shadow-sm"></div>
-            {/* Dark navy box */}
-            <div className="absolute top-[60%] -right-16 w-40 lg:w-[345px] h-14 md:h-16 lg:h-[102px] bg-[#010B2A] rounded-lg shadow-sm"></div>
+          <div className="relative w-full md:w-2/5 md:flex hidden justify-center">
+            {/* Vertical line/rectangle */}
+            <img src="/screen.png" className="" alt="" />
+            {/* Background image for the left side */}
+            <img src="/signupbg.png" className="absolute top-[-40px] left-0 z-[-1]" />
           </div>
-        </div>
 
-        {/* Right side with text and illustration */}
+          {/* Right side with text and illustration */}
         <div className="w-full md:w-3/5 flex flex-col items-center md:items-enter justify-center px-4 space-y-8 md:pl-8">
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-[#0A2463]">

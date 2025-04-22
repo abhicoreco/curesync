@@ -12,7 +12,7 @@ const Footer = () => {
               <img
                 src="../../logoWhite.png"
                 alt="Logo"
-                className="h-16 w-auto"
+                className="h-25 w-auto"
               />
             </Link>
           </div>
@@ -60,7 +60,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="mt-6 text-center text-sm text-[#BBBBBB]">
-          &copy; {new Date().getFullYear()} YourCompanyName. All rights reserved.
+          &copy; {new Date().getFullYear()} CureSync. All rights reserved.
         </div>
       </div>
     </footer>

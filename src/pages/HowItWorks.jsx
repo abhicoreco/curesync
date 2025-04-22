@@ -1,8 +1,9 @@
 import React from 'react'
+import CommingSoon from '../components/CommingSoon'
 
 const HowItWorks = () => {
   return (
-    <div>HowItWorks</div>
+    <CommingSoon/>
   )
 }
 

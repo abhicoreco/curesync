@@ -161,7 +161,7 @@ export default function VaccineSignup() {
   // Render the signup form
   if (currentStep === "signup") {
     return (
-      <div className="flex min-h-screen w-full bg-white relative overflow-hidden">
+      <div className="flex h-screen w-full bg-white relative overflow-hidden">
         {/* Blue curved shape on left */}
         <div className="absolute top-0 left-0 w-[100px] h-[160px] bg-[#0056B3] rounded-br-[100px]" />
 
@@ -364,7 +364,7 @@ export default function VaccineSignup() {
           <div className="mb-20 mt-24 md:mt-12 px-5 md:px-0">
             <div className="relative flex items-center justify-between">
               {/* Base line */}
-              {/* <div className="absolute left-0 h-[9px] top-1/2  w-full -translate-y-1/2 bg-gray-200 z-0" /> */}
+              <div className="absolute left-0 h-[9px] top-1/2  w-full -translate-y-1/2 bg-gray-200 z-0" />
 
               {/* Progress overlay gradient */}
               <div
@@ -476,66 +476,67 @@ export default function VaccineSignup() {
                                 </div>
 
                                 {/* Right image upload section */}
-                                <div className="w-full lg:w-64 h-64 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300 relative">
-                                    {userData.personalInfo.image ? (
-                                        <div className="relative">
-                                            <img
-                                                src={URL.createObjectURL(userData.personalInfo.image)}
-                                                alt="Uploaded"
-                                                className="w-full h-full object-cover rounded-lg"
-                                            />
-                                            <button
-                                                onClick={() =>
-                                                    setUserData({
-                                                        ...userData,
-                                                        personalInfo: { ...userData.personalInfo, image: null },
-                                                    })
-                                                }
-                                                className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1"
-                                            >
-                                                ✕
-                                            </button>
-                                        </div>
-                                    ) : (
-                                        <div className="flex flex-col items-center">
-                                            <label
-                                                htmlFor="imageUpload"
-                                                className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer"
-                                            >
-                                                <UserIcon className="text-white" />
-                                            </label>
-                                            <input
-                                                type="file"
-                                                id="imageUpload"
-                                                accept="image/*"
-                                                className="hidden"
-                                                onChange={(e) => {
-                                                    const file = e.target.files[0]
-                                                    if (file) {
-                                                        setUserData({
+                                                <div className="w-full lg:w-64 h-64 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300 relative">
+                                                  {userData.personalInfo.image ? (
+                                                    <div className="relative">
+                                                      <img
+                                                        src={URL.createObjectURL(userData.personalInfo.image)}
+                                                        alt="Uploaded"
+                                                        className="w-full h-full object-cover rounded-lg"
+                                                      />
+                                                      <button
+                                                        onClick={() =>
+                                                          setUserData({
                                                             ...userData,
-                                                            personalInfo: { ...userData.personalInfo, image: file },
-                                                        })
-                                                    }
-                                                }}
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                    </div> 
-                    <div className="w-full mt-10 lg:mt-10 flex justify-end lg:justify-end">
-                    <button
-                        type="submit"
-                        className="px-8 py-3 bg-white hover:bg-[#010B2A] border border-[#010B2A] text-[#010B2A] hover:text-white font-medium rounded-md transition"
-                    >
-                        Continue
-                    </button>
-                    </div>
-                </form>
+                                                            personalInfo: { ...userData.personalInfo, image: null },
+                                                          })
+                                                        }
+                                                        className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1"
+                                                      >
+                                                        ✕
+                                                      </button>
+                                                    </div>
+                                                  ) : (
+                                                    <div className="flex flex-col items-center">
+                                                      <label
+                                                        htmlFor="imageUpload"
+                                                        className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer"
+                                                      >
+                                                        <UserIcon className="text-white" />
+                                                      </label>
+                                                      <p className="mt-2 text-sm text-gray-500">Upload Profile Picture</p>
+                                                      <input
+                                                        type="file"
+                                                        id="imageUpload"
+                                                        accept="image/*"
+                                                        className="hidden"
+                                                        onChange={(e) => {
+                                                          const file = e.target.files[0]
+                                                          if (file) {
+                                                            setUserData({
+                                                              ...userData,
+                                                              personalInfo: { ...userData.personalInfo, image: file },
+                                                            })
+                                                          }
+                                                        }}
+                                                      />
+                                                    </div>
+                                                  )}
+                                                </div>
+                                              </div>
+                                          </div> 
+                                          <div className="w-full mt-10 lg:mt-10 flex justify-end lg:justify-end">
+                                          <button
+                                            type="submit"
+                                            className="px-8 py-3 bg-white hover:bg-[#010B2A] border border-[#010B2A] text-[#010B2A] hover:text-white font-medium rounded-md transition"
+                                          >
+                                            Continue
+                                          </button>
+                                          </div>
+                                        </form>
             )}
 
-                  {/* Step 3: Health Information */}
+                                          {/* Step 3: Health Information */}
             {formStep === 2 && (
             <form onSubmit={handleFormSubmit}>
               <h1 className="text-4xl font-bold mb-8">
@@ -824,135 +825,133 @@ export default function VaccineSignup() {
 
           {/* Step 2: Vaccination History */}
           {formStep === 3 && (
-            <form onSubmit={handleFormSubmit}>
-              <h1 className="text-3xl md:text-[45px] font-bold mb-2 bg-gradient-to-r from-[#010B2A] to-[#0056B3] bg-clip-text text-transparent">
-                Vaccination History<span className="text-blue-600">.</span>
-              </h1>
-              <p className="text-lg mb-8">Which Vaccines have you received in the past?</p>
+                <form onSubmit={handleFormSubmit}>
+                  <h1 className="text-3xl md:text-[45px] font-bold mb-2 bg-gradient-to-r from-[#010B2A] to-[#0056B3] bg-clip-text text-transparent">
+                  Vaccination History<span className="text-blue-600">.</span>
+                  </h1>
+                  <p className="text-lg mb-8">Which Vaccines have you received in the past?</p>
 
-              <div className="space-y-4 mb-8">
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <div className="space-y-4 mb-8">
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                    className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="COVID 19"
                     checked={userData.vaccinationHistory.vaccines.includes("COVID 19")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">COVID 19</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">COVID 19</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Influenza shot"
                     checked={userData.vaccinationHistory.vaccines.includes("Influenza shot")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Influenza shot</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Influenza shot</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Hepatitis A and B"
                     checked={userData.vaccinationHistory.vaccines.includes("Hepatitis A and B")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Hepatitis A and B</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Hepatitis A and B</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Tetanus, Diphtheria and Pertussis ( TDAP )"
                     checked={userData.vaccinationHistory.vaccines.includes(
                       "Tetanus, Diphtheria and Pertussis ( TDAP )",
                     )}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Tetanus, Diphtheria and Pertussis ( TDAP )</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Tetanus, Diphtheria and Pertussis ( TDAP )</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                    className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Measle, Mumps and Rubella ( MMR )"
                     checked={userData.vaccinationHistory.vaccines.includes("Measle, Mumps and Rubella ( MMR )")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Measle, Mumps and Rubella ( MMR )</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Measle, Mumps and Rubella ( MMR )</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Chickenpox ( Varicella )"
                     checked={userData.vaccinationHistory.vaccines.includes("Chickenpox ( Varicella )")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Chickenpox ( Varicella )</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Chickenpox ( Varicella )</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Polio Vaccine"
                     checked={userData.vaccinationHistory.vaccines.includes("Polio Vaccine")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Polio Vaccine</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Polio Vaccine</span>
+                  </label>
 
-                <label className="flex items-center space-x-3">
-                  <input
-                    type="radio"
-                    className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
+                  <label className="flex items-center space-x-3">
+                    <input
+                    type="checkbox"
+                     className="form-checkbox h-5 w-5 text-[#010B2A] bg-white border-2 border-[#010B2A] appearance-none rounded-full checked:bg-[#010B2A] checked:border-[#010B2A] focus:outline-none transition duration-200"
                     name="vaccinationHistory.vaccines"
                     value="Other"
                     checked={userData.vaccinationHistory.vaccines.includes("Other")}
                     onChange={handleCheckboxChange}
-                  />
-                  <span className="text-[18px] md:text-[20px]">Other</span>
-                </label>
+                    />
+                    <span className="text-[18px] md:text-[20px]">Other</span>
+                  </label>
 
-                {userData.vaccinationHistory.vaccines.includes("Other") && (
-                  <input
+                  {userData.vaccinationHistory.vaccines.includes("Other") && (
+                    <input
                     type="text"
                     className="w-full px-4 py-3 border border-gray-300 rounded-4xl md:w-[725px] focus:outline-none focus:ring-1 focus:ring-blue-500 mt-2"
                     placeholder="Please specify....."
                     name="vaccinationHistory.other"
                     value={userData.vaccinationHistory.other}
                     onChange={handleInputChange}
-                  />
-                )}
-              </div>
+                    />
+                  )}
+                  </div>
 
-              <div className="flex justify-end">
-                <button
-                  type="submit"
-                  className="py-3 px-8 bg-navy-900 bg-white hover:bg-[#010B2A] border border-[#010B2A] text-[#010B2A] hover:text-white font-medium rounded-md transition-colors"
-                >
-                  Save and Continue
-                </button>
-              </div>
-            </form>
+                  <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    className="py-3 px-8 bg-navy-900 bg-white hover:bg-[#010B2A] border border-[#010B2A] text-[#010B2A] hover:text-white font-medium rounded-md transition-colors"
+                  >
+                    Save and Continue
+                  </button>
+                  </div>
+                </form>
           )}
-
-
 
           {/* Step 4: Medications */}
           {formStep === 4 && (
