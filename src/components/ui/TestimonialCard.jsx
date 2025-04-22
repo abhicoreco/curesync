@@ -7,13 +7,13 @@ function TestimonialCard({ text }) {
         <div className="flex justify-center mb-4 relative w-[38px] h-[31px]">
           {/* Inactive Quote (default) */}
           <img
-            src="../../../public/inactiveQuote.png"
+            src="../../../inactiveQuote.png"
             alt="Inactive Quote"
             className="absolute w-full h-full group-hover:hidden"
           />
           {/* Active Quote (shown on hover) */}
           <img
-            src="../../../public/activeQuote.png"
+            src="../../../activeQuote.png"
             alt="Active Quote"
             className="absolute w-full h-full hidden group-hover:block"
           />
