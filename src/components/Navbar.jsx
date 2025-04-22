@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-[#010B2A]">
           <img
-            src="../../public/logo.png"
+            src="../../logo.png"
             alt="Logo"
             className="h-20 md:h-30 w-auto"
           />

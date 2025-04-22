@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <Link to="/">
               <img
-                src="../../public/logoWhite.png"
+                src="../../logoWhite.png"
                 alt="Logo"
                 className="h-16 w-auto"
               />

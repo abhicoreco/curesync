@@ -5,10 +5,10 @@ import StepLabels from '../ui/StepLabels';
 const StepsSection = () => {
     
     const steps = [
-        { number: 1, icon: "../../../public/add-user.png", active: true },
-        { number: 2, icon: "../../../public/test-tube.png", active: true },
-        { number: 3, icon: "../../../public/graph-bar.png", active: false },
-        { number: 4, icon: "../../../public/certificate.png", active: false },
+        { number: 1, icon: "../../../add-user.png", active: true },
+        { number: 2, icon: "../../../test-tube.png", active: true },
+        { number: 3, icon: "../../../graph-bar.png", active: false },
+        { number: 4, icon: "../../../certificate.png", active: false },
     ];
 
     return (

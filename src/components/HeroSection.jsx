@@ -4,9 +4,9 @@ import Navbar from "./Navbar";
 import CustomerRatingCard from "./ui/customerRatingCard";
 
 // Import images
-import customerImage from "../../public/Ellipse 6.png";
-import doctorImage from "../../public/doctor.png";
-import quote from "../../public/quote.svg";
+import customerImage from "../../Ellipse 6.png";
+import doctorImage from "../../doctor.png";
+import quote from "../../quote.svg";
 import FeatureCard from "./ui/FeatureCard";
 
 const HeroSection = () => {
