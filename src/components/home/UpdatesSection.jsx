@@ -89,7 +89,7 @@ const UpdatesSection = () => {
                     </h2>
                     <p className="text-sm text-gray-700 mt-1">March 27, 2025</p>
                   </div>
-                  <div className="md:w-[44.5%] w-[95%] md:absolute relative flex flex-col justify-evenly h-[325px] md:right-6 md:top-46 max-w-[100%] bg-white bg-opacity-90 p-4 rounded-md shadow-sm">
+                  <div className="lg:w-[44.5%] w-[95%] lg:absolute relative flex flex-col justify-evenly h-[325px] lg:right-6 lg:top-46 max-w-[100%] bg-white bg-opacity-90 p-4 rounded-md shadow-sm">
                     <p className="text-[#010b2b] text-sm font-semibold">
                       The U.S. Food and Drug Administration (FDA) has approved
                       updated mRNA COVID-19 vaccines to better protect against

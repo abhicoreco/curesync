@@ -11,14 +11,14 @@ function TestimonialCard({ text }) {
       <div className={baseStyles}>
         <div className="flex justify-center mb-4">
           <img
-            src="../../../public/activeQuote.png"
+            src={"../../../public/activeQuote.png"}
             alt="Quote"
             className="w-[38px] h-[31px] hover:hidden "
           />
           <img
-            src="../../../public/inactiveQuote.png"
+            src={"../../../public/inactiveQuote.png"}
             alt="Quote"
-            className="w-[38px] h-[31px] hover:hidden"
+            className="w-[38px] h-[31px]  "
           />
         </div>
         <p className="text-sm leading-relaxed text-center">{text}</p>

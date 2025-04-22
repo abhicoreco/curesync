@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Hamburger Icon (Visible on small screens) */}
         <button
-          className="md:hidden text-gray-900"
+          className="lg:hidden text-gray-900"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={30} /> : <Menu size={30} />}
@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <div
-          className={`md:flex text-lg font-bold text-[#BBBBBB] ${
+          className={`lg:flex text-lg font-bold text-[#BBBBBB] ${
             isOpen ? "block" : "hidden"
           } absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0`}
         >
