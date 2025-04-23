@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from '../components/home/HeroSection';
 import AccordionSection from '../components/AccordionSection';
 import UpdatesSection from '../components/home/UpdatesSection';
@@ -12,6 +12,11 @@ import AITrialRecommendation from '../components/home/AITrialRecommendation';
 import Footer from '../components/Footer';
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='flex flex-col min-h-screen space-y-8'>
       {/* Hero Section */}
