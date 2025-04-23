@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {  UserIcon } from "lucide-react"
 import { Button } from "../components/ui/Button"
+import { Link } from "react-router-dom"
 
 // Initial form state
 const initialUserData = {
@@ -162,8 +163,15 @@ export default function VaccineSignup() {
   if (currentStep === "signup") {
     return (
       <div className="flex min-h-screen w-full bg-white relative overflow-hidden">
-        {/* Blue curved shape on left */}
-        <div className="absolute top-0 left-0 w-[100px] h-[160px] bg-[#0056B3] rounded-br-[100px]" />
+        <div className="absolute top-0 left-0 w-16 h-24 md:w-[112px] md:h-[177px] bg-[#0056B3] rounded-br-[100px]">   
+        </div>
+        <Link to="/" className="absolute left-4 md:left-9 text-2xl font-bold text-[#010B2A]">
+            <img
+              src="../../logo.png"
+              alt="Logo"
+              className="h-20 md:h-30 w-auto"
+            />
+        </Link>
 
         {/* Main content container */}
         <div className="container z-10 mx-auto mt-20 px-6 py-12 flex flex-col md:flex-row items-center justify-between relative ">
@@ -279,10 +287,18 @@ export default function VaccineSignup() {
     return (
       <div className="min-h-screen w-full bg-white relative overflow-hidden">
         {/* Blue curved shape on left */}
-        <div className="absolute top-0 left-0 w-[80px] md:w-[111px] h-[120px] md:h-[176px] bg-[#0056B3] rounded-br-[100px]" />
+        <div className="absolute top-0 left-0 w-16 h-24 md:w-[112px] md:h-[177px] bg-[#0056B3] rounded-br-[100px]">   
+        </div>
+        <Link to="/" className="absolute left-4 md:left-9 text-2xl font-bold text-[#010B2A]">
+            <img
+              src="../../logo.png"
+              alt="Logo"
+              className="h-20 md:h-30 w-auto"
+            />
+        </Link>
 
         {/* Main content container */}
-        <div className="container mx-auto md:mt-25 px-4 py-12 relative z-10">
+        <div className="container mx-auto mt-7 md:mt-25 px-4 py-12 relative z-10">
           <div className="p-8 mx-auto w-full">
             <h1 className="text-3xl md:text-5xl font-bold mb-2">
               Let's personalize your <span className="block">experience!</span>
